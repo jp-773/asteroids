@@ -23,12 +23,8 @@ def main():
         
         screen.fill("black")
 
-        keys = pygame.key.get_pressed()
-        if keys[pygame.K_LEFT]:
-            player.rotation += 5  # Rotate counterclockwise
-        if keys[pygame.K_RIGHT]:
-            player.rotation -= 5  # Rotate clockwise
-
+        
+        player.update(dt)
         player.draw(screen)
         pygame.display.flip()
         dt = clock.tick(60) / 1000
