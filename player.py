@@ -1,7 +1,7 @@
 import pygame
+from asteroid import *
 from circleshape import *
 from constants import *
-from player import *
 
 class Player(CircleShape):
     def __init__(self, x, y):
